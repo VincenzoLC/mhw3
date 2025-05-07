@@ -1,0 +1,870 @@
+
+body /*Annulla gli spazi tra i tag e il body*/
+{
+    padding:0;
+    margin:0;
+}
+
+.no-scroll {
+    position: fixed;
+    overflow: hidden;
+    height: 100vh;
+    pointer-events: none; /* blocca interazioni */
+  }
+header
+{
+    width:100%;
+}
+
+#nav /*Barra di navigazione che comprende left-center-right*/
+{
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9%;
+}
+#MenuUtente,.Dati
+{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top:15%;
+    left:32%;
+    background-color: white;
+    height: 60%;
+    width: 40%;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+#menuUtente #divBottoneUtente
+{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    margin-left: 2px;
+}
+#divBottoneDati
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left:2px;
+}
+#divBottoneDati2
+{
+    display: flex;
+    flex-direction: column;
+    padding-left:2px;
+    padding-right:2px;
+}
+#bloccoLogin
+{
+    display: flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#left /*Logo di NOTHING della nav*/
+{
+    display:flex;
+    font-family: doto;
+    font-size: 2em;
+    flex-shrink: 1;
+    margin-left: 0.2%;
+    padding-left:0.2%;
+}
+#left a /*link del logo NOTHING*/
+{
+    color:black;
+}
+#right /*Parte di nav dediata alle icone*/
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 0.5%;
+    padding-right: 1%;
+}
+
+#center /*Parte di nav dedicata al menu da Desktop*/
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    flex-wrap: wrap; /*Permette agli elementi di occupare le righe successive in mancanza di spazio EXTRA*/ 
+}
+#center #divDesktopMenu
+{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 2px;
+}
+#center #divDesktopMenu #soloLink
+{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#sotto
+{
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    width: 100%;
+    height: 100%;
+}
+#Telefono
+{
+    display:flex;
+    background-color: white;
+    width: 100%;
+    padding-left:65%;
+    height: 100%;
+
+    justify-content: flex-start;
+    
+}
+#sotto li,li a
+{
+    padding:10px;
+    list-style: none; /* Rimuove i pallini */
+    text-decoration: none;
+    color: grey;
+    cursor:pointer;
+
+}
+#sotto li a:hover
+{
+    color:black;
+}
+#sotto li.title
+{
+    color:black;
+    font-weight: bold;
+}
+#CMF
+{
+    display:flex;
+    background-color: white;
+    width: 100%;
+    padding-left:30%;
+    height: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#CMF div
+{
+    display: flex;
+    justify-content: start;
+}
+#Audio
+{
+    display:flex;
+    background-color: white;
+    width: 100%;
+    padding-left:65%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+#center a, #tel /*Link della nav da Desktop*/
+{
+    text-decoration: none;
+    font-size: large;
+    cursor:pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+    flex-shrink: 1;
+    text-decoration: none;
+    color:black;
+}
+#center a:hover /*Modifica dei link nella nav al passaggio*/
+{
+    border-bottom: 1px solid lightgray;
+}
+#spazioCarrello
+{
+    display:flex;
+    flex-direction:column;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top:0;
+    width:50%;
+    height: 100%;
+    transform: translateX(100%); /* Nasconde il carrello a destra inizialmente */
+    transition: transform 0.3s ease-in-out; /* Transizione fluida */
+    z-index:1;
+}
+#prodotti
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B1B3B3;
+
+}
+#spazioCarrello .SezioneProdotti
+{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#spazioCarrello.aperto
+{
+    transform: translateX(0);
+}
+#spazioCarrello div
+{
+    display:flex;
+    justify-content: flex-end;
+
+
+}
+.bottoneCHIUSO
+{
+    font-family: doto;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-right: 3px;
+    margin:15px;
+    cursor:pointer;
+    pointer-events:all; /* sblocca interazioni */
+}
+
+#carrelloIMG,#Utente
+{
+    cursor:pointer;
+}
+#left a /*Elimina le decorazioni del NOTHING della nav*/
+{
+    text-decoration: none;
+}
+#right img /*Sono le icone della nav right*/
+{
+   width: 40px;
+   height: 40px;
+   object-fit: contain; /*Ridimensiona l'immagine adattandonla al contenitore div*/
+   margin-left: 5px;
+}
+
+#menuIcon /*E' l'icona che compare nei dispositivi mobile*/
+{
+    font-size: 30px;
+    color: black;
+    cursor: pointer; /*Modifica il cursore(diventa mano)*/
+    margin-left: 10px;
+    display:none;
+}
+#mobileMenu  /*E' il menu che appare cliccando l'icona mobile*/
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+}
+
+#mobileMenu .tendaMobile, #mobileMenu a /*Sono i collegamenti(link) del menu mobile*/
+{
+    font-size: large;
+    text-decoration: none;
+    cursor:pointer;
+    color:#000;
+    background-color: white;
+    border-bottom: 1px solid #C7C6CA;
+    border-top: 1px solid #C7C6CA;
+    width: 100%;
+    padding-top:2%;
+    padding-bottom:2%;
+    
+}
+#mobileMenu .tendaMobile
+{
+    display: flex;
+    justify-content: space-between;
+
+}
+.tendaMobile div, #mobileMenu a span
+{
+    padding-left:2%;
+}
+#frecciaRuotata
+{
+    font-family: doto;
+    font-size: large;
+    font-weight: bold;
+    margin-right:2%;
+}
+.tenda,#tendaTelefoni,#tendaAuricolari,#tendaCMF
+{
+    display: flex;
+    justify-content: space-between;
+}
+.tenda div
+{
+    width: 100%;
+}
+
+ #tendaTelefoni,#tendaAuricolari,#tendaCMF,#tendaTELEFONO,#tendaACCESSORIO,#tendaAURICOLARE,#tendaREPEATTEL,#tendaREPEATACC,#tendaREPEATAUX,#tendaWATCH,#tendaALIMENTAZIONE,#tendaESPLORA
+{
+    background-color: #dcdcdc;
+    font-size: large;
+    text-decoration: none;
+    cursor:pointer;
+    color:#000;
+    border-bottom: 1px solid #C7C6CA;
+    border-top: 1px solid #C7C6CA;
+    width: 100%;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+#tendaTELEFONO a,#tendaACCESSORIO a,#tendaAURICOLARE a,#tendaREPEATTEL a,#tendaREPEATACC a,#tendaREPEATAUX a,#tendaWATCH a,#tendaALIMENTAZIONE a,#tendaESPLORA a
+{
+    display: inline;
+    background-color: grey;
+}
+#tendaTelefoni div,#tendaAuricolari div,#tendaCMF div, #tendaTELEFONO,#tendaACCESSORIO,#tendaAURICOLARE,#tendaREPEATTEL,#tendaREPEATACC,#tendaREPEATAUX,#tendaWATCH,#tendaALIMENTAZIONE,#tendaESPLORA
+{
+    padding-left:2%;
+}
+#mobileMenu a:hover /*Modifica al passaggio del cursore sui link*/
+{
+    cursor: pointer;
+}
+#esclusiva /*E' la sezione sotto la nav, dove compare il messaggio*/
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    text-align: center;
+    font-family: garamond;
+    border-bottom: 1px solid #C7C6CA;
+    border-top: 1px solid #C7C6CA;
+    height: 50px;
+}
+#esclusiva #next /*Indica la freccia a destra della sezione sotto nav*/
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: doto;
+    cursor: pointer;
+    
+}
+#esclusiva #prev  /*Indica la freccia a sinistra della sezione sotto nav*/
+{
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: doto;
+    cursor: pointer;
+    
+}
+#messaggio /*E' l'effettivo messaggio che compare*/
+{
+    flex-wrap: wrap; /*Permette agli elementi di occupare le righe successive in mancanza di spazio*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: small;
+}
+
+section /*Corpo della pagina web*/
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .divimg /*Sezione della corpo dedicata alle immagini*/
+{
+    width:65%;
+    height: 100%;
+}
+
+section img /*Modifca delle immagini del corpo*/
+{
+    width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+section .divdescr /*Parte della sezione del corpo dedicata alle didascalie*/
+{
+    width:35%;
+    height: 200px;
+    font-family: Noto Sans Thai;
+}
+section .divdescr1 /*Parte della sezione del corpo dedicata alle didascalie(solo la prima)*/
+{
+    width:35%;
+    height: 400px;
+    font-family: Noto Sans Thai;
+}
+section h2 /*Intestazione all'interno di divdescr1 e divdescr*/
+{
+    font-size: 4em;
+    padding:0;
+    margin:20px;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+section p /*Paragrafi all'interno di divdescr1 e divdescr*/
+{
+    margin-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+section button/*Bottoni cliccabili all'interno dei div della sezione*/
+{
+    
+    background-color: darkblue;
+    color:white;
+    border:none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    /*Definisce transizioni per le proprietà specificate: il colore cambia gradualmente e le trasformazioni in maniera graduale */
+    /*Le trasformazioni sono ad esempio: translate,rotate,scale*/
+    margin-left:50px;
+    margin-top:10px;
+    width: 80%;
+    height: 40px;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button:hover /*Modifica al passaggio sul bottone*/
+{
+  cursor: pointer;
+  transform: scale(1.1); /*Ingrandisce in scala l'elemento del 10%*/
+}
+.auth0
+{
+    margin-left:0;
+    margin-top:0;
+    width: 40%;
+    pointer-events:all; /* sblocca interazioni */
+}
+
+#fine /*Div finale prima del footer*/
+{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+}
+#fine #contenitore /*Div che contengono le frasi finali prima del footer*/
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20%;
+}
+#fine #contenitore h3 /*Intestazione all'interno di contenitore*/
+{
+    font-size:20px;
+    margin-bottom: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left:5px;
+    
+}
+#fine #contenitore p /*Paragrafi all'interno del contenitore*/
+{
+    font-size: 20px;
+    font-family: Playfair Display;
+    margin-top: 0;
+}
+footer /*Parte finale della pagina*/
+    {
+        width: 100%;
+        height: 600px;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+    }
+footer #divtop /*Div superiore del footer*/
+{
+    width: 100%;
+    height: 70%;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+footer #divtop .box1 /*Il div superiore viene diviso in altri div*/
+{
+    width: 60%;  
+    height: 100%; 
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+}
+footer #divtop .box1 ul /*Elenchi presenti nel footer*/
+{
+    list-style: none; /* Rimuove i pallini */
+    margin-right:50px;
+    margin-left: 50px;
+    margin-top:10px;
+    padding:0;
+    color:white;
+    
+}
+.box1  a /*Link degli elenchi*/
+{
+    text-decoration: none;
+    color:white;
+}
+#email /*div che contiene l'input per inserire l'email*/
+{
+    width: 85%;
+    height: 50px;
+    padding:5px;
+    margin-left: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+footer #divtop .box2 h4  /*Intestazione del box 2(iscriviti alla newsletter)*/
+{
+    margin-left: 10px;
+    color:white;
+}
+#email input /*input per inserire l'email*/
+{
+    width:90%;
+    height: 100%;
+    background-color: #000;
+    color:white;
+    border:none;
+    font-family: doto;
+}
+#email input::placeholder /*testo che appare di default all' input*/ 
+{
+    color:white;
+}
+#email input:focus /*Usato per rimuovere bordi ed effetti al click dell'input*/
+{
+    outline: none;
+    border: none;
+}
+#email button /*Bottone della email(freccia >)*/
+{
+    font-family: doto;
+    width:10%;
+    height:100%;
+    margin:0;
+    background-color: #000;
+    border:none;
+    color:white;
+}
+#esitoEmail
+{
+    margin-left: 10px;
+    color:white;
+    font-size: 10px;
+}
+footer #divtop .box2 /*Box del footer che contiene tutta la parte pagamenti e newsletter*/
+{
+    padding-top: 1%f;
+    width: 40%;  /* Due colonne */
+    height: 100%; /* Due righe */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color:#000; 
+}
+#pagamenti /*div per le icone di pagamento*/
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 5%;
+    margin-right: 2%;
+    margin-left: 3%;
+}
+#pagamenti img /*Immagini icone pagamento*/
+{
+    width: 10%;
+   height: 10%;
+   object-fit: cover;
+}
+footer #divbottom /*Div in fondo alla pagina*/
+{
+    background-color:#000;
+    width: 100%;
+    height: 30%;
+    border-top:2px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#informativa
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 2%;
+    padding-left: 2%;
+    color:white;
+}
+#informativa a
+{
+    color:white;
+}
+#informativa #container
+{
+    display:flex;
+    margin-bottom: 5%;
+}
+
+#informativa  input 
+{
+    appearance: none;             /* Rimuove lo stile di default */
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background-color: black;      /* Sfondo nero */
+    border: 1px solid white;      /* Bordo bianco */
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    margin-right: 3%;
+}
+/* Quando è selezionata */
+#informativa input:checked {
+    background-color: black;      /* Sfondo resta nero */
+    border-color: white;
+  }
+  
+  /* Aggiunge il segno di spunta */
+#informativa input:checked::after {
+    content: "";
+    position: absolute;
+    left: 33%;
+    top: 10%;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    border-radius: 1px;
+  }
+#divbottom div 
+{
+    margin-top:15px;
+    color:white;
+}
+#divbottom div a
+{
+    text-decoration: none;
+}
+#divbottom #end /*div degli ultimi link della pagina*/
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+#divbottom #end2 /*div degli ultimi link della pagina*/
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#end div
+{
+    margin-right: 40px;
+}
+#end2 div
+{
+    margin-right: 40px;
+}
+#divbottom div img /*Immagini dei social alla fine della pagina*/
+{
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+    position: static;
+}
+
+@media (max-width: 1000px) 
+{
+    #center {
+        display: none; /* Mostra il menu su desktop */
+    }
+    #mobileMenu
+    {
+        display:none; 
+    }
+    #MenuUtente,.Dati
+    {
+        display: none;
+        width: 60%;
+        left: 19%;
+    }
+    #sotto
+    {
+        display:none;
+    }
+    #menuIcon {
+        display: flex; /* Nasconde il menu mobile su desktop */
+    }
+    section
+    {
+        flex-direction: column;
+    }
+    section .divimg
+    {
+        width:100%;
+        height: 100%;
+    }
+    section .divdescr
+    {
+        width: 100%;
+        height: 200px;
+    }
+    section .divdescr1
+    {
+        width: 100%;
+        height: 300px;
+    }
+    #fine
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+    }
+    #fine #contenitore
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+    }
+    section h2
+    {
+        font-size: 2em;
+    }
+    footer #divtop .box1
+    {
+        flex-wrap: wrap;
+    }
+    #box1 ul,li,h4
+    {
+        font-size: 11px;
+        padding:0;
+        margin:0;
+    }
+    .box2 
+    {
+        padding-top:20px;
+    }
+    #end
+    {
+        flex-direction: column;
+        margin-left: 5px;
+    }
+    #end2
+    {
+        flex-direction: column;
+    }
+    #end div
+    {
+        font-size: 12px;
+    }
+    #spazioCarrello 
+    {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out; /* Manteniamo la transizione */
+        display: none;
+    }
+
+    /* Quando la classe 'aperto' è aggiunta, il carrello si sposta dentro lo schermo */
+    #spazioCarrello.aperto 
+    {
+        transform: translateX(0); /* Carrello visibile con slide-in */
+        width: 100%;
+    }
+    #informativa
+    {
+        display:none;
+    }
+    #informativa #container div
+    {
+        font-size: 8px;
+    }
+    #tendaTelefoni,#tendaAuricolari,#tendaCMF,.tendaMobile ,#tendaTELEFONO,#tendaAccessorio,#tendaAURICOLARE,#tendaREPEATTEL,#tendaREPEATACC,#tendaREPEATAUX,#tendaWATCH,#tendaALIMENTAZIONE,#tendaESPLORA
+    {
+        display:none;
+    }
+}
+@media (min-width: 1000px) 
+{
+    #mobileMenu
+    {
+        display:none;
+    }
+    #sotto
+    {
+        display:none;
+    }
+    #Telefono
+    {
+        display:none;
+    }
+    #Audio
+    {
+        display:none;
+    }
+    #CMF
+    {
+        display: none;
+    }
+    #MenuUtente,.Dati
+    {
+        display: none;
+    }
+    #spazioCarrello
+    {
+        transform: translateX(100%);
+        display:none;
+    }
+    #informativa
+    {
+        display:none;
+    }
+}
+@media (max-width: 500px) 
+{
+    #messaggio
+    {
+        font-size: 10px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
